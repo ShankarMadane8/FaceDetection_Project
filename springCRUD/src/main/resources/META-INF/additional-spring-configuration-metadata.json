@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "serevr.port",
+    "type": "java.lang.String",
+    "description": "A description for 'serevr.port'"
+  },
+  {
+    "name": "spring.jpa.property.hibernate.dialect",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.property.hibernate.dialect'"
+  }
+]}

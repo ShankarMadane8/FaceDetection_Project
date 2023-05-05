@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<!--
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/face-api.js"></script>
+  <script src="js/faceSystem.js"></script>
+-->
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<!-- 
+<script defer th:src="@{/newface/js/face-api.min.js}"></script>
+ -->
+<script defer th:src="@{/newface/js/jquery-2.1.1.min.js}"></script>
+<script defer th:src="@{/newface/js/face-api.js}"></script>
+<script defer th:src="@{/newface/js/faceSystem.js}"></script>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+div {
+	display: flex;
+	justify-content: center;
+}
+
+canvas {
+	position: absolute;
+	/* 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	*/
+}
+</style>
+</head>
+<body>
+
+	<div>
+		<h1>Face Detection Application</h1>
+	</div>
+	
+	<div>
+	  <h1>UserName(FileName): <span th:text="${fileName}"></span> </h1>
+	</div>
+	
+	<div>
+		<video id="video" width="300" height="300" autoplay muted></video>
+	</div>
+
+	<div>
+		<button th:onclick="startCamera([[ ${fileName} ]])">Start Camera</button>
+	</div>
+
+</body>
+</html>

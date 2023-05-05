@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Face Detaection app</h1>
+   <h1>Real-time Face Recognition</h1>
+    <body>
+    <h1>Real-Time Video Face Recognition</h1>
+    <div> 
+    
+   
+    
+    
+   
+    <video id="frame"  th:attr="src=${'data:video/mp4;base64,' + frame}" autoplay controls  th:with="video=${frame}">
+      <source th:attr="src=@{${#strings.toString(frame)}}" type="application/octet-stream" />
+    </video>
+    
+    <video width="640" height="480" controls autoplay th:with="frame=${frame}">
+    <source data-th-data="${frame}" data-th-type="'video/mp4'" />
+</video> 
+    
+
+
+    
+    
+   
+   
+   <!--  <video id="video" autoplay="true" width="640" height="480"></video>
+    <script>
+        var video = document.getElementById("video");
+        var source = new EventSource("/video/face");
+
+        source.onmessage = function(event) {
+            var frame = JSON.parse(event.data);
+            var data =  frame.data;
+            video.src = data;
+        }
+    </script> -->
+       
+    
+    </div>
+</body>
+</body>
+</html>
